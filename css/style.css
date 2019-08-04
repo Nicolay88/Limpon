@@ -11,6 +11,10 @@ body {
     color: #7581a1;
     line-height: 26px; /*межстрочный интервал*/
 }
+.wrap {
+    max-width: 1110px;
+    margin: 0 auto;
+}
 a {
     text-decoration: none;
 }
@@ -19,17 +23,119 @@ h1 {
     font-size: 80px;
     color: #192b59;
     font-weight: 600;
+    max-width: 540px;
+    line-height: 90px;
+    letter-spacing: -2.5px;
+    margin-bottom: 65px;
+}
+.title-h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #192b59;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+.title-h2 span {
+    display: block; /*для переноса на другую строчку*/
+    font-size: 16px;
+    font-weight: 800;
+    color: #1085e4;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 14px;
+}
+.page-stat .title-h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+.page-stat .title-h2 {
+    max-width: 500px;
+}
+ .title-40 {
+    font-size: 40px;
+    letter-spacing: -1.1px;
+    
+    font-weight: 600;
+    color: #192b59;
+    line-height: 1.2;
+    
+}
+ .title-40 span {
+    display: block; /*для переноса на другую строчку*/
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+    
+    font-weight: 800;
+    color: #1085e4;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    
 }
 .nav {
-    color: #6e7ea9;
+    
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav>li {
+    padding: 0 15px;
+}
+.nav-item {
+    color: #6e7ea9;
+}
+.btn-primary {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #1085e4;
+    border: 1px solid #1085e4;
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: #1085e4;
+}
+.btn-secondary {
+    color: #7e8bae;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #CBDBE8;
+    border: 1px solid #CBDBE8;
+    padding: 20px 40px;
+    border-radius: 30px;
+}
+.btn-secondary:hover {
+    background-color: #fff;
+    color: 7e8bae;
 }
 .btn-free {
-    color: #fff;
     font-weight: 400;
-    background-color: #1085e4;
+    padding: 22px 56px;
+    letter-spacing: 1.7px;
+}
+.btn-info {
+    color: #8085b1;
+    background-color: transparent; /*прозрачный фон*/
+    border: 1px solid #DCE1E5;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+.btn-group a + a {
+    margin-left: 15px; 
 }
 .grid h2 {
     font-size: 40px;
@@ -52,6 +158,64 @@ h1 {
     color: #1085e4;
     font-weight: 600;
 }
-.grid-item:nth-child(2) {
-    color: red;
+
+.list-stat {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around; /*разметка для flex*/
+    margin-top: 75px;
 }
+.list-stat>li {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1085e4;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+}
+.list-stat>li>span {
+    display: block;
+    font-size: 60px;
+    color: #bacbdc;
+    margin-bottom: 23px;
+    letter-spacing: 0;
+
+}
+.screen {
+    margin-top: 36px;
+    margin-bottom: -7px;
+}
+.box-price {
+    display: flex;
+    justify-content: space-between;
+}
+.box-price-item {
+    background-color: #f5faff;
+    width: 350px;
+    height: 620px;
+}
+.box-price-item.active {
+    background-color: #192B59;
+    color: #fff;
+}
+.box-price-item ul {
+    list-style-type: none;
+    padding-left: 0; 
+}
+/*PAGE*/
+.page-stat {
+    background-color: #EDF6FF;
+    padding: 116px 0 96px 0;
+}
+
+.page-screen, .page-plan {
+    
+    text-align: center;
+}
+.page-screen {
+    padding: 116px 0 0 0;
+}
+/*изменяет свойства блока, которые прописаны только в body*/
+/*.grid-item:nth-child(2) {
+    color: red;
+}*/
