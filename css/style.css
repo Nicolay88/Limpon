@@ -123,6 +123,7 @@ h1 {
     border: 1px solid #1085e4;
     padding: 20px 40px;
     border-radius: 30px;
+    transition: 0.3s; /*плавный переход*/
 }
 .btn-primary:hover {
     background-color: #fff;
@@ -138,6 +139,7 @@ h1 {
     border: 1px solid #CBDBE8;
     padding: 20px 40px;
     border-radius: 30px;
+    transition: 0.3s; /*плавный переход*/
 }
 .btn-secondary:hover {
     background-color: #fff;
@@ -158,6 +160,7 @@ h1 {
     padding: 20px 62px;
     border-radius: 30px;
     text-transform: uppercase;
+    transition: 0.3s; /*плавный переход*/
 }
 .btn-info:hover {
     background-color: #94b4cc;
@@ -199,6 +202,47 @@ h1 {
 .list-company-item {
     display: block;
 }
+.grid {
+ display: grid; 
+ grid-template-areas:   "a b c"
+                        "d b c"
+                        "d f g"
+                        "e f g"
+                        "e h h";
+    grid-gap: 35px; /*расстояние между блоками*/
+    grid-template-columns: 1fr 1fr 1fr; /*три колонки равного размера*/
+    max-width: 1110px;
+    margin: 85px auto;
+}
+.grid-title {
+    grid-area: a;
+}
+.grid-item-1 {
+    grid-area: b;
+    margin-top: 50px;
+}
+.grid-item-2 {
+    grid-area: c;
+    margin-top: 50px;
+}
+.grid-item-3 {
+    grid-area: d;
+}
+.grid-item-4 {
+    grid-area: e;
+
+}
+.grid-item-5 {
+    grid-area: f;
+   
+}
+.grid-item-6 {
+    grid-area: g;
+    
+}
+.grid-text {
+    grid-area: h;
+}
 .grid h2 {
     font-size: 40px;
     color: #192b59;
@@ -210,15 +254,105 @@ h1 {
     font-weight: 800;
     display: block; /*для переноса на другую строку*/
 }
+.grid-item {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #f4f4f4;
+    padding: 40px 29px 64px;
+    
+}
+
 .grid-item h3 {
     font-size: 20px;
     color: #192b59;
     font-weight: 600;
+    margin-bottom: 18px;
 }
 .grid-item a {
     font-size: 14px;
     color: #1085e4;
     font-weight: 600;
+}
+.grid-icon {
+    background-repeat: no-repeat;
+    display: block;
+    height: 92px; /*одинаковая высота у блоков*/
+    margin: 0 auto 21px;
+    background-position: center; /**/
+
+}
+.grid-icon-1 {
+    background-image: url(../img/icone_1.png);
+    background-size: 73px 79px; /*вместо width и height во всех icon*/
+    /*width: 73px;
+    height: 79px;*/
+}
+.grid-icon-2 {
+    background-image: url(../img/icone_2.png);
+    background-size: 89px 85px; /*вместо width и height во всех icon*/
+    
+}
+.grid-icon-3 {
+    background-image: url(../img/icone_3.png);
+    background-size: 79px 82px; /*вместо width и height во всех icon*/
+   
+}
+.grid-icon-4 {
+    background-image: url(../img/icone_4.png);
+    background-size: 103px 92px; /*вместо width и height во всех icon*/
+  
+}
+.grid-icon-5 {
+    background-image: url(../img/icone_5.png);
+    background-size: 85px 90px; /*вместо width и height во всех icon*/
+   
+}
+.grid-icon-6 {
+    background-image: url(../img/icone_6.png);
+    background-size: 100px 87px; /*вместо width и height во всех icon*/
+    
+}
+.grid-item p {
+    height: 77px;
+    overflow: hidden;
+}
+.page-softwere-icon {
+    display: block;
+    background-image: url(../img/icone_7.png);
+    background-repeat: no-repeat;
+    background-position: -8px 0;
+    width: 92px;
+    height: 86px;
+}
+.page-softwere-flex {
+    display: flex;
+    justify-content: flex-end; /*в конце блока*/
+    
+}
+.page-softwere-flex>div {
+    flex-basis: 55%;
+}
+.page-softwere .title-h2 {
+    max-width: 766px;
+    margin-top: 12px;
+    margin-bottom: 26px;
+}
+.page-softwere-list {
+    margin-top: 31px;
+    height: 323px;
+    overflow: hidden; /*содержимое обрезается под размер блока*/
+    overflow-y: scroll; /*скролл контента*/
+}
+.page-softwere-list dt {
+    font-weight: 700;
+    color: #5a6789;
+    margin-bottom: 10px;
+}
+.page-softwere-list dd {
+    margin-left: 0;
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 .list-stat {
@@ -287,6 +421,67 @@ h1 {
 .box-price-item.active::after {
     display: none;
 }
+.box-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.box-subscribe-text {
+    font-size: 18px;
+    max-width: 437px;
+}
+.box-subscribe-user {
+    position: relative;
+}
+.box-subscribe-child {
+    flex-basis: 49%; /**/
+}
+.box-subscribe-user input {
+    border: 2px solid #4161B4;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 45px;
+    background-color: transparent;
+    padding: 25px  230px 25px 37px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /*элемент равняется по ширине box*/
+}
+
+.box-subscribe-user .btn-primary {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    padding: 17px 50px;
+}
+
+.box-subscribe-user input:focus, .box-subscribe-user .btn-primary {
+    outline: none; /*убирает надпись у плейсхолдера при наведении*/
+}
+.box-subscribe-user input::-webkit-input-placeholder {color: #b1c3ee;}
+.box-subscribe-user input::-moz-placeholder {color: #b1c3ee;}
+.box-subscribe-user input:-moz-placeholder {color: #b1c3ee;}
+.box-subscribe-user input:-ms-input-placeholder {color: #b1c3ee;}
+
+.box-subscribe-img {
+    
+    background-image: url(../img/robot.png);
+    width: 354px;
+    height: 417px;
+    position: relative;
+    background-repeat: no-repeat;
+   
+    
+}
+.page-subscribe .title-h2 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.page-subscribe .title-h2 span {
+    font-size: 14px;
+}
 .box-price-item>h3 {
     font-size: 70px;
     color: #192b59;
@@ -348,7 +543,9 @@ h1 {
     background-color: #EDF6FF;
     padding: 116px 0 96px 0;
 }
-
+.page-softwere {
+    padding: 109px 0 156px 0;
+}
 .page-screen, .page-plan { 
     text-align: center;
 }
@@ -356,6 +553,8 @@ h1 {
     padding: 116px 0 0 0;
 }
 .page-subscribe {
+    padding: 25px 0 28px 0;
+    color: #fff;
     background: rgba(10,32,144,1);
     background: -moz-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,32,144,1)), color-stop(100%, rgba(35,120,205,1)));
